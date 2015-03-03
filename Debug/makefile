@@ -23,19 +23,19 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: BuscaArray
+all: ArraySearchs
 
 # Tool invocations
-BuscaArray: $(OBJS) $(USER_OBJS)
+ArraySearchs: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
-	gcc  -o "BuscaArray" $(OBJS) $(USER_OBJS) $(LIBS)
+	gcc  -o "ArraySearchs" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(OBJS)$(C_DEPS)$(EXECUTABLES) BuscaArray
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) ArraySearchs
 	-@echo ' '
 
 .PHONY: all clean dependents
